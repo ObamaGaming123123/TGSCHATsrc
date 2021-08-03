@@ -19,5 +19,10 @@ namespace TGSCHAT
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ChatStart());
         }
+
+        internal static void broadcast(string dataFromClient, string clNo, bool v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
