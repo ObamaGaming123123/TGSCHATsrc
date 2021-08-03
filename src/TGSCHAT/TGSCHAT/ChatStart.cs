@@ -26,5 +26,13 @@ namespace TGSCHAT
         {
 
         }
+
+        private void ClientStart_Click(object sender, EventArgs e)
+        {
+            ClientForm Client = new ClientForm();
+            this.Hide();
+            Client.ShowDialog();     
+            this.Show();
+        }
     }
 }

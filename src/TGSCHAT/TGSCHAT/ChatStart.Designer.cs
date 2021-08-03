@@ -42,6 +42,7 @@ namespace TGSCHAT
             this.ClientStart.TabIndex = 0;
             this.ClientStart.Text = "Client";
             this.ClientStart.UseVisualStyleBackColor = true;
+            this.ClientStart.Click += new System.EventHandler(this.ClientStart_Click);
             // 
             // ClientnServer
             // 
