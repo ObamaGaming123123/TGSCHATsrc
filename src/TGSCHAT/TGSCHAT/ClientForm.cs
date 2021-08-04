@@ -17,7 +17,7 @@ namespace TGSCHAT
         System.Net.Sockets.TcpClient clientSocket = new System.Net.Sockets.TcpClient();
         NetworkStream serverStream = default(NetworkStream);
         string readData = null;
-        int Closing = 0, Connected = 0;
+        int Connected = 0;
         public ClientForm()
         {
             InitializeComponent();

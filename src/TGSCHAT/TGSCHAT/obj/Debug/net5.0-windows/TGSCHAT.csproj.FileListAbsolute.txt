@@ -17,3 +17,4 @@ C:\Users\118293\Desktop\TGSCHATsrc\TGSCHATsrc\src\TGSCHAT\TGSCHAT\obj\Debug\net5
 C:\Users\118293\Desktop\TGSCHATsrc\TGSCHATsrc\src\TGSCHAT\TGSCHAT\obj\Debug\net5.0-windows\ref\TGSCHAT.dll
 C:\Users\118293\Desktop\TGSCHATsrc\TGSCHATsrc\src\TGSCHAT\TGSCHAT\obj\Debug\net5.0-windows\TGSCHAT.pdb
 C:\Users\118293\Desktop\TGSCHATsrc\TGSCHATsrc\src\TGSCHAT\TGSCHAT\obj\Debug\net5.0-windows\TGSCHAT.genruntimeconfig.cache
+C:\Users\118293\Desktop\TGSCHATsrc\TGSCHATsrc\src\TGSCHAT\TGSCHAT\obj\Debug\net5.0-windows\TGSCHAT.ServerForm.resources

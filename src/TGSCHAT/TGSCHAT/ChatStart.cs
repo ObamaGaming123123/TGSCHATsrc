@@ -34,5 +34,13 @@ namespace TGSCHAT
             Client.ShowDialog();     
             this.Show();
         }
+
+        private void ServerStart_Click(object sender, EventArgs e)
+        {
+            ServerForm ServerForm = new();
+            this.Hide();
+            ServerForm.ShowDialog();
+            this.Show();
+        }
     }
 }

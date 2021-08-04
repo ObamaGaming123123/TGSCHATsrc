@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace TGSCHAT
 {
-    public partial class Server : Form
+    public partial class ServerForm : Form
     {
-        public Server()
+        public ServerForm()
         {
             InitializeComponent();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            ServerClass instance = new ServerClass();
-            // Error instance.Serv = this;
+            ServerClass.formObject = this;
             ServerClass.Connect();
         }
     }

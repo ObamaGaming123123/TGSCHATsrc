@@ -12,34 +12,34 @@ namespace TGSCHAT
 {
     public class ServerClass
     {
-        public ServerClass Serv = null;
+        public static ServerForm formObject = null;
         public static Hashtable clientsList = new Hashtable();
         public static bool RestartConnection = false;
         public static TcpListener serverSocket;
         public static TcpClient clientSocket;
         public static string hostname;
         public static string myIP;
-        static void Main(string[] args)
+        public static void MainText(string Text)
         {
-            Connect();
+            formObject.textBox1.Text = formObject.textBox1.Text + Text + Environment.NewLine;
         }
         public static void Connect(int counter = 0)
         {
-            serverSocket = new TcpListener(8888);
+            MainText("Starting Server");
+            IPAddress localAddr = IPAddress.Parse("10.36.100.250");
+            serverSocket = new TcpListener(localAddr,8888);
 
             var dt = DateTime.Now;
             clientSocket = default(TcpClient);
             serverSocket.Start();
-            Console.WriteLine("Chat Server Started ....");
+            MainText("Chat Server Started ....");
 
             hostname = Dns.GetHostName(); // Retrive the Name of HOST  
-            Console.WriteLine("ComputerName: " + hostname);
+            MainText("ComputerName: " + hostname);
             // Get the IP  
             myIP = Dns.GetHostByName(hostname).AddressList[0].ToString();
-            Console.WriteLine("ServerName: " + myIP);
-            Console.WriteLine("----------------------------------");
-
-            Console.ReadKey();
+            MainText("ServerName: " + myIP);
+            MainText("----------------------------------");
 
             while ((true))
             {
@@ -58,7 +58,7 @@ namespace TGSCHAT
 
                 broadcast(dataFromClient + " Joined ", dataFromClient, false);
 
-                Console.WriteLine(dataFromClient + " Joined\t" + dt.ToString("HH:mm:ss"));
+                MainText(dataFromClient + " Joined\t" + dt.ToString("HH:mm:ss"));
 
 
                 handleClinet client = new handleClinet();
@@ -138,7 +138,7 @@ namespace TGSCHAT
                         int penis = networkStream.Read(bytesFrom, 0, 1024);
                         dataFromClient = System.Text.Encoding.ASCII.GetString(bytesFrom, 0, penis);
                         dataFromClient = dataFromClient.Substring(0, dataFromClient.IndexOf("$"));
-                        Console.WriteLine("From client - " + clNo + " : " + dataFromClient);
+                        ServerClass.MainText("From client - " + clNo + " : " + dataFromClient);
                         rCount = Convert.ToString(requestCount);
 
                         Program.broadcast(dataFromClient, clNo, true);
@@ -146,10 +146,10 @@ namespace TGSCHAT
                     }
                     catch
                     {
-                        Console.WriteLine(clNo + " Has Discconected \t Time:" + dt.ToString("HH:mm:ss"));
+                        ServerClass.MainText(clNo + " Has Discconected \t Time:" + dt.ToString("HH:mm:ss"));
                         Program.broadcast(clNo + " Discconected ", clNo, false);
                         clientsList.Remove(clNo);
-                        Thread.CurrentThread.Abort();
+                        break;
                     }
                 }
             }//end while

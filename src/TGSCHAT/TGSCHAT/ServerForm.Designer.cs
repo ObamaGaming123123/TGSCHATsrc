@@ -1,7 +1,7 @@
 ﻿
 namespace TGSCHAT
 {
-    partial class Server
+    partial class ServerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,26 @@ namespace TGSCHAT
         /// </summary>
         private void InitializeComponent()
         {
-            this.Main = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Main
+            // textBox1
             // 
-            this.Main.Location = new System.Drawing.Point(12, 12);
-            this.Main.Multiline = true;
-            this.Main.Name = "Main";
-            this.Main.Size = new System.Drawing.Size(577, 426);
-            this.Main.TabIndex = 0;
-            this.Main.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(702, 432);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Server
+            // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 457);
-            this.Controls.Add(this.Main);
-            this.Name = "Server";
-            this.Text = "Server";
+            this.ClientSize = new System.Drawing.Size(726, 456);
+            this.Controls.Add(this.textBox1);
+            this.Name = "ServerForm";
+            this.Text = "ServerForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +56,6 @@ namespace TGSCHAT
 
         #endregion
 
-        private System.Windows.Forms.TextBox Main;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

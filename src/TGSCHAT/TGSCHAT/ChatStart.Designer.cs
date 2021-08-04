@@ -62,6 +62,7 @@ namespace TGSCHAT
             this.ServerStart.TabIndex = 2;
             this.ServerStart.Text = "Host";
             this.ServerStart.UseVisualStyleBackColor = true;
+            this.ServerStart.Click += new System.EventHandler(this.ServerStart_Click);
             // 
             // ChatStart
             // 
